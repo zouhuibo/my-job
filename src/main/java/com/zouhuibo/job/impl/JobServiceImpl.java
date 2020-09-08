@@ -37,7 +37,7 @@ public class JobServiceImpl implements JobService {
         Set<JobKey> alljob = scheduler.getJobKeys(GroupMatcher.anyGroup());
         for (JobKey jobKey : alljob)
         {
-            System.out.println("stopAllJob:jobname="+jobKey.getName());
+            System.out.println("stopAllJob: jobname="+jobKey.getName());
             scheduler.deleteJob(jobKey);
         }
     }
